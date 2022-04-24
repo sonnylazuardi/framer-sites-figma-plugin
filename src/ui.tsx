@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import useFramerMessage from "../lib/index";
+import useFramerMessage from "../lib";
 import "./ui.css";
 
 const App = () => {

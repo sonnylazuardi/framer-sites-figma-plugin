@@ -3,7 +3,8 @@
     "target": "es6",
     "jsx": "react",
     "noEmit": false, // Emit handled by webpack.
-    "typeRoots": ["./node_modules/@types", "./node_modules/@figma"]
+    "typeRoots": ["./node_modules/@types", "./node_modules/@figma"],
+    "moduleResolution": "node"
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

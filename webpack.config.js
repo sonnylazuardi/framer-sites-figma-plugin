@@ -13,8 +13,6 @@ module.exports = (env, argv) => ({
   entry: {
     ui: "./src/ui.tsx", // The entry point for your UI code
     code: "./src/code.ts", // The entry point for your plugin code
-    ["framer/api"]: "./src/lib/framer/api.tsx",
-    ["framer/ui"]: "./src/lib/framer/ui.tsx",
   },
 
   module: {

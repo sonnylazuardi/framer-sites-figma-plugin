@@ -4,11 +4,74 @@ Build figma plugin with low code using framer sites
 
 ![screen](screenshot.png)
 
-# Framer Sites
+## Framer Sites
 
 Duplicate [this framer site](https://sites.framer.com/projects/new?duplicate=sUTqiLD13aV9nhuIt1gz)
 
-# Figma Plugin
+### Code Override
+
+`Examples.tsx`
+
+```typescript
+import { figma, postFigmaMessage } from "./FigmaApi.tsx"
+
+export function createEllipse(Component): ComponentType {
+    return (props) => {
+        return (
+            <Component
+                {...props}
+                onClick={async () => {
+                    postFigmaMessage(() => {
+                        let ellipse = figma.createEllipse()
+                        ellipse.resize(300, 300)
+                    })
+                }}
+            />
+        )
+    }
+}
+
+export function createRectangle(Component): ComponentType {
+    return (props) => {
+        return (
+            <Component
+                {...props}
+                onClick={async () => {
+                    postFigmaMessage(() => {
+                        let ellipse = figma.createRectangle()
+                        ellipse.resize(300, 300)
+                    })
+                }}
+            />
+        )
+    }
+}
+
+export function createPage(Component): ComponentType {
+    return (props) => {
+        return (
+            <Component
+                {...props}
+                onClick={async () => {
+                    postFigmaMessage(() => {
+                        figma.createPage()
+                    })
+                }}
+            />
+        )
+    }
+}
+```
+
+Assigning code override
+
+![assign](assign.png)
+
+Autocomplete
+
+![autocomplete](autocomplete.png)
+
+## Figma Plugin
 
 clone [figma plugin examples](https://github.com/figma/plugin-samples/tree/master/webpack-react): `webpack-react`
 

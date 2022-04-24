@@ -15,38 +15,6 @@ Duplicate [this framer site](https://sites.framer.com/projects/new?duplicate=sUT
 ```typescript
 import { figma, postFigmaMessage } from "./FigmaApi.tsx"
 
-export function createEllipse(Component): ComponentType {
-    return (props) => {
-        return (
-            <Component
-                {...props}
-                onClick={async () => {
-                    postFigmaMessage(() => {
-                        let ellipse = figma.createEllipse()
-                        ellipse.resize(300, 300)
-                    })
-                }}
-            />
-        )
-    }
-}
-
-export function createRectangle(Component): ComponentType {
-    return (props) => {
-        return (
-            <Component
-                {...props}
-                onClick={async () => {
-                    postFigmaMessage(() => {
-                        let ellipse = figma.createRectangle()
-                        ellipse.resize(300, 300)
-                    })
-                }}
-            />
-        )
-    }
-}
-
 export function createPage(Component): ComponentType {
     return (props) => {
         return (

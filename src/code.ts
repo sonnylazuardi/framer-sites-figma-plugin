@@ -1,4 +1,4 @@
-import { framerOnMessage } from "./lib/framer/api";
+import framerOnMessage from "./lib/framer/api";
 
 figma.showUI(__html__, {
   width: 300,

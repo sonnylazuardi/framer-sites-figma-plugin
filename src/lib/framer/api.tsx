@@ -1,4 +1,4 @@
-export const framerOnMessage = (msg) => {
+const framerOnMessage = (msg) => {
   if (msg.type === "execute") {
     try {
       eval(msg.code);
@@ -16,3 +16,5 @@ export const framerOnMessage = (msg) => {
     }
   }
 };
+
+export default framerOnMessage;

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const useFramerMessage = () => {
+const useFramerMessage = () => {
   useEffect(() => {
     window.addEventListener(
       "message",
@@ -11,3 +11,5 @@ export const useFramerMessage = () => {
     );
   }, []);
 };
+
+export default useFramerMessage;
